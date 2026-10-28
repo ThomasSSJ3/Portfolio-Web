@@ -59,7 +59,7 @@
                 <span class="logo-text">Thomas Grelet</span>
             </a>
 
-            <nav class="navbar" id="navbar">
+            <nav class="navbar" id="navbar" aria-label="Main navigation">
                 <a href="index.html#home" data-section="home" data-i18n="nav.home">Home</a>
                 <a href="index.html#about" data-section="about" data-i18n="nav.about">About</a>
                 <a href="index.html#projects" data-section="projects" class="active" data-i18n="nav.projects">Projects</a>
@@ -91,7 +91,7 @@
                     <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
                     <span data-i18n="page.back">All projects</span>
                 </a>
-                <h1 data-i18n="proj.pro.title"></h1>
+                <h1 data-i18n="proj.pro.title">Title</h1>
                 <p class="lead" data-i18n="proj.pro.desc"></p>
             </div>
         </section>
@@ -99,34 +99,44 @@
         <section class="section proj-body">
             <div class="container">
                 <div class="proj-cover">
-                    <img src="assets/projects-projet_pro.png" alt="" data-fallback>
+                    <img src="assets/pr-projet_pro/projects-projet_pro.png" alt="" data-fallback>
                 </div>
 
                 <div class="proj-layout">
                     <div class="proj-main">
-                        <!-- Les textes de cette page se modifient dans i18n.js (objet PROJECTS, projet "pro") -->
                         <article class="proj-section">
                             <h2 data-i18n="proj.context_h">Context &amp; goals</h2>
-                            <p data-i18n="proj.pro.context"></p>
+                            <p data-i18n="proj.pro.context01"></p><br>
+                            <p data-i18n="proj.pro.context02"></p>
+                            <p data-i18n="proj.pro.context03"></p>
+                            <p data-i18n="proj.pro.context04"></p>
+                            <p data-i18n="proj.pro.context05"></p>
+                            <p data-i18n="proj.pro.context06"></p>
+                            <p data-i18n="proj.pro.context07"></p>
+                            <p data-i18n="proj.pro.context08"></p>
+                            <p data-i18n="proj.pro.context09"></p>
                         </article>
 
                         <article class="proj-section">
                             <h2 data-i18n="proj.role_h">My role</h2>
-                            <p data-i18n="proj.pro.role"></p>
+                            <p data-i18n="proj.pro.role01"></p><br>
+                            <p data-i18n="proj.pro.role02"></p><br>
+                            <p data-i18n="proj.pro.role03"></p><br>
+                            <p data-i18n="proj.pro.role04"></p><br>
+                            <p data-i18n="proj.pro.role05"></p>
                         </article>
 
                         <article class="proj-section">
                             <h2 data-i18n="proj.results_h">Results &amp; takeaways</h2>
-                            <p data-i18n="proj.pro.results"></p>
+                            <p data-i18n="proj.pro.results01"></p><br>                            
+                            <p data-i18n="proj.pro.results02"></p>
                         </article>
 
                         <section class="proj-section">
                             <h2 data-i18n="proj.gallery_h">Gallery</h2>
                             <div class="gallery">
-                                <!-- Pour ajouter une image, remplace un bloc "gallery-item" par :
-                                     <img src="assets/mon-image.png" alt="Description de l'image"> -->
-                                <div class="gallery-item" data-i18n="placeholder.image"></div>
-                                <div class="gallery-item" data-i18n="placeholder.image"></div>
+                                <img src="assets/pr-projet_pro/projects-projet_pro_g01.png" alt="Graphes et résultats de questionnaires">
+                                <img src="assets/pr-projet_pro/projects-projet_pro_g02.png" alt="Illustration questionnaire Tally">
                             </div>
                         </section>
                     </div>
@@ -141,32 +151,29 @@
 
                         <div class="aside-block">
                             <h3 data-i18n="proj.tech_h">Technologies</h3>
-                            <!-- TODO : remplace par les technologies utilisées (Python, C, ROS, Arduino…) -->
                             <ul class="tags">
-                                <li class="tag" data-i18n="placeholder.tech"></li>
-                                <li class="tag" data-i18n="placeholder.tech"></li>
+                                <li class="tag" data-i18n="placeholder.tech_gdrive"></li>
+                                <li class="tag" data-i18n="placeholder.tech_gsheets"></li>
                             </ul>
                         </div>
 
                         <div class="aside-block">
                             <h3 data-i18n="proj.links_h">Links</h3>
-                            <!-- TODO : remplace les "#" par tes liens (GitHub, rapport PDF…) ou supprime les lignes inutiles -->
                             <div class="aside-links">
-                                <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="proj.link_repo">Source code</span></a>
-                                <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_report">Report (PDF)</span></a>
+                                <a href="https://tally.so/r/mK17aX"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="proj.link_tally"></span></a>
                             </div>
                         </div>
                     </aside>
                 </div>
 
                 <nav class="proj-nav" aria-label="Projects">
-                    <a href="project-lorenz.html" class="prev">
+                    <a href="project-ter.html" class="prev">
                         <span class="label" data-i18n="proj.prev">Previous project</span>
-                        <span class="title" data-i18n="proj.lorenz.title"></span>
-                    </a>
-                    <a href="project-ter.html" class="next">
-                        <span class="label" data-i18n="proj.next">Next project</span>
                         <span class="title" data-i18n="proj.ter.title"></span>
+                    </a>
+                    <a href="project-lorenz.html" class="next">
+                        <span class="label" data-i18n="proj.next">Next project</span>
+                        <span class="title" data-i18n="proj.lorenz.title"></span>
                     </a>
                 </nav>
             </div>

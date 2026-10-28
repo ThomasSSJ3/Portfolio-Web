@@ -59,7 +59,7 @@
                 <span class="logo-text">Thomas Grelet</span>
             </a>
 
-            <nav class="navbar" id="navbar">
+            <nav class="navbar" id="navbar" aria-label="Main navigation">
                 <a href="index.html#home" data-section="home" data-i18n="nav.home">Home</a>
                 <a href="index.html#about" data-section="about" data-i18n="nav.about">About</a>
                 <a href="index.html#projects" data-section="projects" class="active" data-i18n="nav.projects">Projects</a>
@@ -91,7 +91,7 @@
                     <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
                     <span data-i18n="page.back">All projects</span>
                 </a>
-                <h1 data-i18n="proj.pfr.title"></h1>
+                <h1 data-i18n="proj.pfr.title">Title</h1>
                 <p class="lead" data-i18n="proj.pfr.desc"></p>
             </div>
         </section>
@@ -99,7 +99,7 @@
         <section class="section proj-body">
             <div class="container">
                 <div class="proj-cover">
-                    <img src="assets/projects-pfr.png" alt="" data-fallback>
+                    <img src="assets/pr-pfr/projects-pfr.png" alt="" data-fallback>
                 </div>
 
                 <div class="proj-layout">
@@ -123,10 +123,10 @@
                         <section class="proj-section">
                             <h2 data-i18n="proj.gallery_h">Gallery</h2>
                             <div class="gallery">
-                                <!-- Pour ajouter une image, remplace un bloc "gallery-item" par :
-                                     <img src="assets/mon-image.png" alt="Description de l'image"> -->
-                                <div class="gallery-item" data-i18n="placeholder.image"></div>
-                                <div class="gallery-item" data-i18n="placeholder.image"></div>
+                                <img src="assets/pr-pfr/projects-pfr_g01.jpg" alt="Boîte du matériel">
+                                <img src="assets/pr-pfr/projects-pfr_g02.png" alt="Résultat cartographie LiDAR">
+                                <img src="assets/pr-pfr/projects-pfr_g03.png" alt="Architecture matériel du robot">
+                                <img src="assets/pr-pfr/projects-pfr_g04.png" alt="Pilote manuel via Educonnect">
                             </div>
                         </section>
                     </div>
@@ -141,32 +141,40 @@
 
                         <div class="aside-block">
                             <h3 data-i18n="proj.tech_h">Technologies</h3>
-                            <!-- TODO : remplace par les technologies utilisées (Python, C, ROS, Arduino…) -->
                             <ul class="tags">
-                                <li class="tag" data-i18n="placeholder.tech"></li>
-                                <li class="tag" data-i18n="placeholder.tech"></li>
+                                <li class="tag" data-i18n="placeholder.tech_arduino"></li>
+                                <li class="tag" data-i18n="placeholder.tech_c"></li>
+                                <li class="tag" data-i18n="placeholder.tech_github"></li>
+                                <li class="tag" data-i18n="placeholder.tech_json"></li>
+                                <li class="tag" data-i18n="placeholder.tech_makefile"></li>
+                                <li class="tag" data-i18n="placeholder.tech_python"></li>
+                                <li class="tag" data-i18n="placeholder.tech_raspberry"></li>
                             </ul>
                         </div>
 
                         <div class="aside-block">
-                            <h3 data-i18n="proj.links_h">Links</h3>
-                            <!-- TODO : remplace les "#" par tes liens (GitHub, rapport PDF…) ou supprime les lignes inutiles -->
-                            <div class="aside-links">
-                                <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="proj.link_repo">Source code</span></a>
-                                <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_report">Report (PDF)</span></a>
+                            <h3 data-i18n="proj.links_h">Links</h3>   
+                            <div class="aside-links">                             
+                                <a href="assets/pr-pfr/projects-pfr_subject.pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_subject">Subject (PDF)</span></a>
+                                <a href="assets/pr-pfr/projects-pfr_spec.pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_spec">Specification Document (PDF)</span></a>                                
+                                <a href="assets/pr-pfr/projects-pfr_slides.pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_slides">Slides (PDF)</span></a>                                
+                                <a href="assets/pr-pfr/projects-pfr_report.pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_report">Report (PDF)</span></a>                                
+                                <a href="assets/pr-pfr/projects-pfr_user_guide.pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_user_guide">User Guide (PDF)</span></a>    
+                                <a href="assets/pr-pfr/projects-pfr_annexe.pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="proj.link_annexe">Annexe (PDF)</span></a>
+                                <a href="https://github.com/ThomasSSJB/PFR_groupe3"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="proj.link_repo">Source code</span></a>
                             </div>
                         </div>
                     </aside>
                 </div>
 
                 <nav class="proj-nav" aria-label="Projects">
-                    <a href="project-ter.html" class="prev">
+                    <a href="project-pirates.html" class="prev">
                         <span class="label" data-i18n="proj.prev">Previous project</span>
-                        <span class="title" data-i18n="proj.ter.title"></span>
-                    </a>
-                    <a href="project-pirates.html" class="next">
-                        <span class="label" data-i18n="proj.next">Next project</span>
                         <span class="title" data-i18n="proj.pirates.title"></span>
+                    </a>
+                    <a href="project-ter.html" class="next">
+                        <span class="label" data-i18n="proj.next">Next project</span>
+                        <span class="title" data-i18n="proj.ter.title"></span>
                     </a>
                 </nav>
             </div>
