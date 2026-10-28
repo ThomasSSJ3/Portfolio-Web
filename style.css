@@ -803,7 +803,7 @@ html[data-lang="fr"] .lang-btn [data-l="fr"] {
     position: relative;
     aspect-ratio: 16 / 8;
     overflow: hidden;
-    margin: 2.5rem 0 3.5rem;
+    margin: -5rem 0 3.5rem;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
