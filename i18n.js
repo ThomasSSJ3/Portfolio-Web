@@ -27,7 +27,6 @@ const UI = {
         "hero.hi": "Hi, I'm",
         "hero.roles": ["Robotics Student", "Engineering Student", "AI Student", "Embedded Systems Student", "Image Analyst"],
         "hero.roles_sr": "Robotics student, engineering student, AI student, embedded systems student, image analyst.",
-        // TODO : remplace cette bio par la tienne
         "hero.bio": "Robotics engineering student interested in AI, embedded systems and image analysis. This portfolio gathers the projects I have worked on throughout my studies.",
         "hero.cv": "Download CV",
         "hero.work": "See my work",
@@ -38,8 +37,7 @@ const UI = {
         "about.title": "About",
         "about.accent": "me",
         "about.p1": "I'm a robotics engineering student, curious about the places where artificial intelligence, embedded systems and image analysis meet.",
-        // TODO : remplace ce paragraphe par ton parcours, ce qui te motive, ce que tu recherches (stage, alternance, premier poste…)
-        "about.p2": "[Replace this text with your own story: your background, what drives you, what you are looking for.]",
+        "about.p2": "I have a strong interest in the space field. Currently in my forth year of studies, I am looking for an internship for a four mouth duration.",
         "about.focus": "Focus areas",
         "tag.robotics": "Robotics",
         "tag.ai": "Artificial intelligence",
@@ -49,7 +47,7 @@ const UI = {
 
         "projects.title": "My",
         "projects.accent": "projects",
-        "projects.intro": "A selection of the projects I have worked on during my studies, from first year to today.",
+        "projects.intro": "A selection of the projects I have worked on during my studies, from first year to today (from L1 to 4A).",
         "filter.all": "All",
         "card.view": "View project",
 
@@ -79,6 +77,12 @@ const UI = {
         "proj.links_h": "Links",
         "proj.link_repo": "Source code",
         "proj.link_report": "Report (PDF)",
+        "proj.link_subject": "Subject (PDF)",
+        "proj.link_slides": "Slides (PDF)",
+        "proj.link_annexe": "Annexe (PDF)",
+        "proj.link_spec": "Specification Document (PDF)",
+        "proj.link_tally": "Course choice (Tally)",
+        "proj.link_user_guide": "User Guide (PDF)",
         "proj.prev": "Previous project",
         "proj.next": "Next project",
 
@@ -87,7 +91,19 @@ const UI = {
         "placeholder.role": "Explain what you personally worked on: tasks, tools, team size.",
         "placeholder.results": "Summarise the results you obtained and what you learned.",
         "placeholder.image": "Image to add",
-        "placeholder.tech": "Technology"
+        "placeholder.tech": "Technology",
+        "placeholder.tech_gdrive": "Google Drive",
+        "placeholder.tech_gsheets": "Google Sheets",
+        "placeholder.tech_github": "GitHub",
+        "placeholder.tech_makefile": "Makefile",
+        "placeholder.tech_arduino": "Arduino",
+        "placeholder.tech_raspberry": "Raspberry",
+        "placeholder.tech_c": "C",
+        "placeholder.tech_java": "JAVA",
+        "placeholder.tech_json": "JSON",
+        "placeholder.tech_python": "Python",
+        "placeholder.tech_3dmodel": "3D Modeling",
+        "placeholder.tech_uml": "UML"
     },
 
     fr: {
@@ -116,8 +132,8 @@ const UI = {
 
         "about.title": "À propos",
         "about.accent": "de moi",
-        "about.p1": "Je suis étudiant ingénieur en robotique, curieux de tout ce qui se joue entre intelligence artificielle, systèmes embarqués et analyse d'images.",
-        "about.p2": "[Remplace ce texte par ton parcours, ce qui te motive et ce que tu recherches.]",
+        "about.p1": "Je suis étudiant ingénieur en robotique, curieux de tout ce qui se joue entre Intelligence Artificielle, systèmes embarqués et analyse d'images.",
+        "about.p2": "Je suis particulièrement intéressé par le domaine spatial. Actuellement en quatrième année d'études, je suis à la recherche d'un stage pour une durée de quatre mois.",
         "about.focus": "Domaines d'intérêt",
         "tag.robotics": "Robotique",
         "tag.ai": "Intelligence artificielle",
@@ -127,7 +143,7 @@ const UI = {
 
         "projects.title": "Mes",
         "projects.accent": "projets",
-        "projects.intro": "Une sélection des projets réalisés pendant mes études, de la première année à aujourd'hui.",
+        "projects.intro": "Une sélection des projets réalisés pendant mes études, de la première année à aujourd'hui (de la L1 à la 4A).",
         "filter.all": "Tous",
         "card.view": "Voir le projet",
 
@@ -157,6 +173,12 @@ const UI = {
         "proj.links_h": "Liens",
         "proj.link_repo": "Code source",
         "proj.link_report": "Rapport (PDF)",
+        "proj.link_subject": "Sujet (PDF)",
+        "proj.link_slides": "Présentation (PDF)",
+        "proj.link_spec": "Dossier de Spécifications (PDF)",
+        "proj.link_annexe": "Annexe (PDF)",
+        "proj.link_tally": "Test Orientation (Tally)",
+        "proj.link_user_guide": "Manuel d'Utilisation (PDF)",
         "proj.prev": "Projet précédent",
         "proj.next": "Projet suivant",
 
@@ -164,7 +186,19 @@ const UI = {
         "placeholder.role": "Explique ce sur quoi tu as personnellement travaillé : tâches, outils, taille de l'équipe.",
         "placeholder.results": "Résume les résultats obtenus et ce que tu as appris.",
         "placeholder.image": "Image à ajouter",
-        "placeholder.tech": "Technologie"
+        "placeholder.tech": "Technologie",
+        "placeholder.tech_gdrive": "Google Drive",
+        "placeholder.tech_gsheets": "Google Sheets",
+        "placeholder.tech_github": "GitHub",
+        "placeholder.tech_makefile": "Makefile",
+        "placeholder.tech_arduino": "Arduino",
+        "placeholder.tech_raspberry": "Raspberry",
+        "placeholder.tech_c": "C",
+        "placeholder.tech_java": "JAVA",
+        "placeholder.tech_json": "JSON",
+        "placeholder.tech_python": "Python",
+        "placeholder.tech_3dmodel": "Modélisation 3D",
+        "placeholder.tech_uml": "UML"
     }
 };
 
@@ -210,22 +244,22 @@ const PROJECTS = {
     pirates: {
         year: "3A",
         en: {
-            title: "Pirate Game",
+            title: "Pirate Game (JAVA)",
             desc: "Game project developed during the third year."
         },
         fr: {
-            title: "Pirate Game",
+            title: "Jeu des Pirates (JAVA)",
             desc: "Projet de jeu développé en troisième année."
         }
     },
     ija: {
         year: "L2",
         en: {
-            title: "IJA – “Connected Speakers” Prototyping",
+            title: "IJA - “Connected Speakers” Prototyping",
             desc: "Prototyping project around connected speakers, second year."
         },
         fr: {
-            title: "IJA – Prototypage « Enceintes connectées »",
+            title: "IJA - Prototypage « Enceintes connectées »",
             desc: "Projet de prototypage autour d'enceintes connectées, en deuxième année."
         }
     },
@@ -258,8 +292,27 @@ const PROJECTS = {
             desc: "Professional project carried out during the first year."
         },
         fr: {
-            title: "Projet professionnel",
-            desc: "Projet professionnel réalisé en première année."
+            title: "Projet Professionnel",
+            desc: "Projet de première année : en tant que groupe de soutien numérique, nous avons fourni aux six autres groupes les outils dont ils avaient besoin (stockage partagé, quiz d'orientation, grille d'évaluation).",
+            
+            context01: "Réalisé en première année de classe préparatoire, le \"Projet Professionnel\" a pour but de comprendre le monde de l'ingénieur. L'objectif principal est de questionner le plus d'acteurs possibles autour de cette profession : ingénieurs (avec notamment l'organisation d'une table ronde), étudiants et ressources humaines. Commun à toute la promotion, soit environ 120 étudiants, nous étions répartis dans 7 groupes différents : Coordination, Événementiel, Support Transverse, Rencontres Ingénieurs, Rencontres Étudiants , Rencontres RH et Guides des Parcours.",
+            context02: "Voici le travail de chaque équipe :",
+            context03: "• Coordination : lien entre les groupes et les enseignants. Transmission des consignes, synthèses hebdomadaires de l'avancement, suivi des délais, aide à la résolution des conflits.",
+            context04: "• Événementiel : organisation de la table ronde avec six ingénieurs de parcours différents (invitations, réponses, questions, logistique), préparation du point intermédiaire et du bilan final.",
+            context05: "• Support Transverse : outils numériques pour les autres groupes. Drive partagé pour centraliser les documents, quiz d'orientation pour le Guide des Parcours et questionnaires d'auto-évaluation.",
+            context06: "• Rencontres Ingénieurs : questionnaire commun, rencontres avec des ingénieurs de profils variés, comptes rendus partagés et restitution finale (parcours, quotidien, évolution de carrière, salaires, conseils).",
+            context07: "• Rencontres Étudiants : création d'un questionnaire, interviews d'étudiants, analyse des résultats et comptes rendus.",
+            context08: "• Rencontres RH : contact d'entreprises (33 contactées, 15 rencontrées), échanges avec des professionnels RH, puis restitution sur le recrutement, le dossier de candidature, l'entretien d'embauche et la formation.",
+            context09: "• Guides des Parcours : mise à jour d'un guide en ligne des formations menant au métier d'ingénieur. Tri de plus de 200 formations et 8 concours, fiches « Domaines et Métiers », vidéos, podcasts, carte des formations et quiz d'orientation.",
+            
+            role01: "Le projet a débuté avec une réunion de présentation, suite à laquelle chaque étudiant à pu choisir un groupe. Ainsi, j'ai rejoint celui du Support Tranverse et je me suis porté volontaire pour en être le délégué principal.",
+            role02: "Au début du projet, je me suis occupé de créer le dossier Drive nécessaire au partage des documents de l'ensemble de la promotion. Avec quelques de mes camarades, nous avons géré les accès : chaque groupe pouvait modifier son dossier mais pas celui des autres équipes. Difficulté : l'utilisation de l'adresse mail universitaire était obligatoire sauf que certains avaient du mal à créer un compte Google avec cette adresse-là. Nous avons donc conçu et partagé un tutoriel vidéo pour mieux les accompagner.",
+            role03: "Le groupe \"Guides des Parcours\" avait besoin d'un questionnaire basé sur ce principe : on donne ses trois matières préférées et ça nous renvoie un domaine correspondant. J'ai donc conçu ce questionnaire grâce à l'outil en ligne Tally, qui propose une version gratuite satisfaite comparée à ses concurrents Surveymonkey et Typeform, également essayés.",
+            role04: "Le travail qui nous a pris le plus de temps est la partie concernant l'évaluation. L'objectif visé était que notre équipe trouve un moyen efficace d'évaluer chaque personne. Ces évaluations, ensuite données à l'équipe enseignante, ont servi à poser les vraies notes. Par conséquent nous avons décidé de créer un Google Form pour chaque groupe, dans lequel chacun a pu noté sur cinq points et sur différents critères (Présence, Prise d'initiative, Implication, Esprit d'équipe...) ses camarades, de manière anonyme. L'enjeu était d'avoir des critères bienveillants pour que les étudiants soient le plus honnête possible, et pas donner une bonne note seulement aux \"copains\" par exemple. Ayant déjà acquis des connaissances en Excel, je me suis occupé de lier les Google Forms à des Google Sheets pour pouvoir éditer les feuilles de calculs : notes et moyenne de chaque étudiant, moyenne de chaque critère etc. De plus, en complément de ces évaluations, nous avons soumis à l'ensemble de la promotion des questionnaires de statisfaction concernant notamment le travail des autres groupes ou encore le ressenti global du projet.",
+            role05: "En tant que délégué du groupe, j'étais en charge d'assurer le communication avec notre coordinateur et les enseignants. Cela s'est notamment manifesté par des échanges de mail, ainsi que des points de discussions en présentiel.",
+
+            results01: "Les nombreux questionnaires ont mené à des résultats souvent concluants. Les étudiants ont été suffisamment volontaires vis-à-vis des évaluations de groupes, ce qui fait que chaque personne a pu avoir une note relativement objective par rapport aux critères. Cependant, nous pouvons aussi constater dans les statistiques que près de la moitié de la promotion n'a pas ressenti le besoin de faire appel à notre groupe. Cela s'explique notamment par le fait que certains n'ont pas besoin qu'on leur crée un fichier type Excel car ils ont déjà les compétences pour, ce qui fait que notre rôle au sein du projet a parfois été flou.",            
+            results02: "D'un point de vue personnel, ce projet m'a notamment appris à travail en équipe, puisque le nombre de personnes impliquées était conséquent. Avec la fonction de délégué j'ai pu expérimenté des responsabilités intéressantes comme la prise de décisions. J'ai également pu perfectionner la pratique de certains outils comme Google Drive et Google Sheets grâce au travail d'ampleur qui a été mené."
         }
     }
 };
