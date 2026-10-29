@@ -83,6 +83,8 @@ const UI = {
         "proj.link_spec": "Specification Document (PDF)",
         "proj.link_tally": "Course choice (Tally)",
         "proj.link_user_guide": "User Guide (PDF)",
+        "proj.link_thackavoir": "Competition (THackaVoir)",
+        "proj.link_thackavoir_page": "Project page (THackaVoir)",
         "proj.prev": "Previous project",
         "proj.next": "Next project",
 
@@ -179,6 +181,8 @@ const UI = {
         "proj.link_annexe": "Annexe (PDF)",
         "proj.link_tally": "Test Orientation (Tally)",
         "proj.link_user_guide": "Manuel d'Utilisation (PDF)",
+        "proj.link_thackavoir": "Concours (THackaVoir)",
+        "proj.link_thackavoir_page": "Page du projet (THackaVoir)",
         "proj.prev": "Projet précédent",
         "proj.next": "Projet suivant",
 
@@ -260,7 +264,20 @@ const PROJECTS = {
         },
         fr: {
             title: "IJA - Prototypage « Enceintes connectées »",
-            desc: "Projet de prototypage autour d'enceintes connectées, en deuxième année."
+            desc: "Projet de deuxième année : prototype d'enceintes connectées pilotées par une télécommande, conçu pour aider de jeunes enfants déficients visuels à se repérer et à se déplacer à l'IJA de Toulouse.",
+
+            context01: "Ce projet a été réalisé en deuxième année de CUPGE, dans le cadre de la 8e édition du concours ThacKaVoir (2025). Ce concours confie à des étudiants la fabrication de dispositifs imaginés par des enseignantes spécialisées de l'Institut des Jeunes Aveugles (IJA) de Toulouse pour leurs élèves. Notre groupe de quatre personnes a choisi le sujet « Enceintes connectées », porté par une instructrice de locomotion de l'IJA, qui était notre cliente.",
+            context02: "Son besoin : aider de jeunes enfants ayant une déficience visuelle importante à se repérer et à se déplacer dans le service de la Petite Enfance. Des enceintes placées au-dessus des portes émettent un repère sonore (« Salle de jeu », « Salle de goûter »…), déclenché à distance avec une télécommande aux boutons faciles à distinguer. Le dispositif sert aussi à développer l'autonomie des enfants, qui peuvent rejoindre seuls un point d'intérêt, et à travailler la localisation spatiale et le pointage auditif en disposant les enceintes autour de l'enfant.",
+            context03: "Le cahier des charges imposait notamment des enceintes mobiles et alimentées par batterie, un son facile à modifier, et une communication sans Wi-Fi, impossible à installer à l'IJA. Au-delà de la technique, le projet comprenait une vraie relation client : comprendre le besoin d'une personne qui connaît les enfants et leurs usages, reformuler le cahier des charges et lui présenter l'avancement.",
+
+            role01: "Je me suis d'abord formé au FabLab à l'utilisation des imprimantes 3D et de la découpeuse laser. Lors du brainstorming, auquel nous avons tous participé, j'ai proposé des idées clés : le mode de communication (le Wi-Fi dans un premier temps) et un système aimanté pour déplacer facilement les enceintes d'un endroit à l'autre. Faute de temps, ce système n'a pas pu être développé.",
+            role02: "J'ai ensuite modélisé la télécommande en 3D avec Tinkercad. Les boutons portent des formes en relief (carré, étoile, croix, cercle, triangle) disposées pour que deux formes voisines soient très différentes, comme le cercle à côté de l'étoile et de la croix, afin d'aider les enfants à les distinguer au toucher.",
+            role03: "J'ai ensuite testé une première solution en Wi-Fi. J'ai installé et paramétré un Raspberry Pi 3, puis codé en Python un serveur Flask avec des routes pour lancer et arrêter un son sur une enceinte reliée en Bluetooth. J'ai aussi monté deux boutons sur une plaque de prototypage reliée au Raspberry et écrit un second programme pour les lire. Faire communiquer les deux programmes s'est révélé difficile. Comme le Wi-Fi n'était de toute façon pas utilisable à l'IJA, nous avons basculé sur une liaison radio.",
+            role04: "Pour la version finale, j'ai réalisé les montages de trois blocs à partir de schémas trouvés en ligne : un émetteur pour la télécommande (carte Arduino Uno, émetteur radio, deux boutons) et deux récepteurs pour les enceintes (Arduino Uno, récepteur radio, lecteur MP3 relié à une enceinte). Enfin, j'ai appris la soudure à l'étain pour obtenir une télécommande plus compacte, avec moins de fils apparents.",
+
+            results01: "Le prototype final comprend une télécommande à deux boutons et deux enceintes. Un appui sur le premier bouton fait jouer « Salle de jeu » sur la première enceinte, un appui sur le second fait jouer « Salle de goûter » sur la deuxième.",
+            results02: "Le 27 mai 2025, nous l'avons présenté à l'IJA devant un public mixte de 50 à 70 personnes : personnes déficientes visuelles, accompagnants, encadrants. Nous avons ensuite tenu un stand où chacun pouvait essayer les prototypes des différents groupes. Notre projet a terminé 2e du concours, aux votes du public. En effet, le projet a été particulièrement apprécié des jeunes enfants. Le lendemain, nous l'avons présenté de nouveau à nos enseignants. Il y a donc eu deux présentations très différentes : l'une grand public, axée sur la vulgarisation et l'usage, l'autre technique, axée sur l'architecture et les choix de conception.",
+            results03: "C'est la première fois que nous pouvions manipuler du matériel avec autant de liberté (Arduino, Raspberry Pi, modules radio, lecteur MP3, soudure). J'y ai appris à monter et tester un circuit, à lire des schémas, à chercher et adapter du code, à utiliser l'IA comme aide sans lui déléguer la compréhension, et à travailler pour une vraie cliente, ce qui impose d'écouter, de reformuler et de s'adapter aux contraintes du terrain. Ce projet m'a aussi aidé à confirmer mon orientation vers la filière SRI (systèmes robotiques) plutôt que STRI (réseaux informatiques). Il m'est resté une légère frustration de ne pas avoir pu le pousser plus loin."
         }
     },
     trains: {
@@ -271,7 +288,18 @@ const PROJECTS = {
         },
         fr: {
             title: "Gestion d'un trafic ferroviaire",
-            desc: "Projet de gestion d'un trafic ferroviaire, en deuxième année."
+            desc: "Projet de deuxième année : application en C, utilisable dans le terminal, qui simule une compagnie ferroviaire avec trois profils (administrateur, contrôleur, voyageur) : gestion des trajets, recherche d'itinéraires, réservations et comptes utilisateurs.",
+
+            context01: "Ce projet a été réalisé en deuxième année de CUPGE (UPSSITECH, 2024-2025), en binôme et sous Linux. Le sujet, intitulé « THOMAS - a Train to HOMe And Stations », demandait de programmer en C la gestion d'une compagnie de chemin de fer : des trajets composés de gares, et des voyageurs qui réservent des places sur un ou plusieurs trajets à la suite. L'objectif était autant technique qu'organisationnel : apprendre à concevoir, programmer et documenter un projet à plusieurs en se répartissant les tâches.",
+            context02: "Le programme propose trois modes d'utilisation, avec connexion par identifiant et mot de passe. L'administrateur gère les trajets (ajouter, modifier, supprimer un trajet ou ses gares) et les comptes (changer un mot de passe, supprimer un utilisateur). Le contrôleur vérifie les réservations d'un voyageur à partir de son identifiant et peut modifier son propre mot de passe. Le voyageur recherche un itinéraire entre deux gares, le réserve, consulte ses réservations et peut les annuler. Les mots de passe sont soumis à des règles de sécurité (longueur, majuscule, minuscule, chiffre, caractère spécial) et enregistrés chiffrés.",
+            context03: "Le réseau simulé compte quatre trajets interconnectés, aller et retour, avec dix places par train. La recherche renvoie un trajet direct s'il existe, sinon jusqu'à deux itinéraires avec une correspondance, avec le temps de parcours de chaque étape.",
+
+            role01: "Le début du projet s'est fait ensemble : réflexion sur l'architecture, choix des structures de données et premières fonctions. Nous nous sommes ensuite réparti le travail. J'ai réalisé tous les menus de l'application avec la bibliothèque ncurses : navigation au clavier avec les flèches, saisie des champs, messages de succès ou d'erreur, et enchaînement des écrans pour chacun des trois profils. Chaque menu est décrit par une structure qui regroupe un titre et une liste d'options, chacune associée à la fonction qu'elle déclenche. J'ai aussi écrit le Makefile qui compile le projet.",
+            role02: "Mon binôme s'est occupé de produire une vraie documentation du code avec Doxygen. Nous avons présenté le projet à notre enseignant lors d'une soutenance orale avec démonstration, sans rapport écrit.",
+
+            results01: "L'application est fonctionnelle de bout en bout : un voyageur peut créer un compte, se connecter, rechercher un itinéraire, le réserver, le consulter puis l'annuler, et le contrôleur peut vérifier ses réservations. Les places disponibles sont mises à jour à chaque réservation et annulation, et le programme refuse une réservation en double ou un train complet.",
+            results02: "Le principal défi était de conserver les données entre deux exécutions. Nous avons enregistré les utilisateurs, leurs réservations et les trajets dans des fichiers JSON, que nous manipulons avec la bibliothèque cJSON : c'était la première fois que nous utilisions ce format. Nous avons aussi utilisé des piles, vues en cours un peu plus tôt dans le semestre, pour représenter les gares d'un trajet, y insérer ou supprimer une gare, et calculer le trajet retour en inversant les temps. C'était également notre deuxième utilisation de GitHub, avec une organisation plus fluide que sur le projet précédent.",
+            results03: "Ce projet m'a appris à structurer une interface en terminal avec ncurses, à lire et écrire des données JSON en C, à utiliser des piles et des pointeurs de fonctions dans un vrai programme, et à me répartir le travail dans un binôme. Pistes d'amélioration : remplacer le chiffrement des mots de passe, qui est un simple décalage de caractères, par un vrai hachage, et gérer des correspondances à plus d'une étape."
         }
     },
     lorenz: {
@@ -282,7 +310,16 @@ const PROJECTS = {
         },
         fr: {
             title: "Attracteur de Lorenz",
-            desc: "Projet autour de l'attracteur de Lorenz, en deuxième année."
+            desc: "Projet de deuxième année : programme en C qui simule et trace la trajectoire d'un point à partir d'équations différentielles : attracteur de Lorenz, oscillateur de Van der Pol et oscillateur harmonique.",
+
+            context01: "Projet de programmation en C réalisé en deuxième année de CUPGE (année 2024-2025), en binôme. Le sujet demandait de représenter la trajectoire d'un point à partir des équations qui définissent sa vitesse en fonction de sa position. Avec les équations de Lorenz, un système célèbre pour illustrer le chaos, on calcule pas à pas la position du point avec un petit incrément de temps dt, puis on affiche la courbe 3D avec Gnuplot. L'objectif de base était de tracer l'attracteur à partir de la position (1, 2, 3) avec σ = 10, ρ = 28 et β = 8/3. Nous avons ajouté plusieurs extensions : saisie des paramètres par l'utilisateur, choix entre trois systèmes dynamiques, et une structure commune aux systèmes (fonctions d'initialisation, de mise à jour et paramètres) pour pouvoir en ajouter facilement.",
+
+            role01: "Nous avons travaillé ensemble sur presque tout le projet : conception du programme, écriture des fonctions de simulation et de la fonction principale, tests, puis rédaction du rapport. Nous avons aussi mis en place ensemble le dépôt GitHub et l'organisation des dossiers (sources, en-têtes, bibliothèques, exécutables, données de test et documentation).",
+            role02: "J'ai écrit seul le Makefile, qui automatise la compilation des fichiers sources, la création des fichiers objets et la liaison de l'exécutable final. Il permet de recompiler tout le projet avec une seule commande, sans taper à la main chaque étape.",
+
+            results01: "Le programme fonctionne pour les trois systèmes : il demande les paramètres à l'utilisateur, calcule la trajectoire, l'enregistre avec la position, les vitesses et la vitesse totale à chaque instant, et permet de tracer les courbes avec Gnuplot. Il vérifie les allocations mémoire et les choix de l'utilisateur, et libère la mémoire avant de quitter.",
+            results02: "C'était notre première utilisation de GitHub, et cela a été notre principale source de difficulté. Il a fallu comprendre comment partager un dépôt, faire des commits réguliers, récupérer le travail de l'autre et éviter de se gêner en modifiant les mêmes fichiers. Cet apprentissage a été utile : Git est un outil quasi indispensable pour travailler à plusieurs sur du code.",
+            results03: "Ce projet m'a aussi appris à coder en C, c'est-à-dire à découper un programme en modules plutôt que de tout mettre dans un seul fichier, à gérer la mémoire, à utiliser des pointeurs de fonctions pour traiter plusieurs systèmes de la même façon, et à automatiser la compilation avec Make."
         }
     },
     pro: {
