@@ -16,7 +16,7 @@
 
     /* ---------- 0. Réglages ---------- */
     // Adresse qui recevra les messages du formulaire (ouvre l'application mail du visiteur)
-    const CONTACT_EMAIL = "ton.adresse@email.com"; // TODO : mets ta vraie adresse
+    const CONTACT_EMAIL = "thomasgrelet1@gmail.com";
 
     const root = document.documentElement;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
