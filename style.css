@@ -153,16 +153,12 @@ ul {
     letter-spacing: -0.02em;
 }
 .logo-mark {
-    display: grid;
-    place-items: center;
+    display: block;
+    flex: 0 0 2.3rem;
     width: 2.3rem;
     height: 2.3rem;
     border-radius: 0.65rem;
-    background: var(--accent);
-    color: var(--accent-ink);
-    font-family: var(--mono);
-    font-size: 0.85rem;
-    font-weight: 700;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 .logo:hover .logo-mark {
