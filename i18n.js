@@ -85,6 +85,7 @@ const UI = {
         "proj.link_user_guide": "User Guide (PDF)",
         "proj.link_thackavoir": "Competition (THackaVoir)",
         "proj.link_thackavoir_page": "Project page (THackaVoir)",
+        "proj.link_bhealthcare": "BHealthCare's website",
         "proj.prev": "Previous project",
         "proj.next": "Next project",
 
@@ -105,7 +106,8 @@ const UI = {
         "placeholder.tech_json": "JSON",
         "placeholder.tech_python": "Python",
         "placeholder.tech_3dmodel": "3D Modeling",
-        "placeholder.tech_uml": "UML"
+        "placeholder.tech_uml": "UML",
+        "placeholder.tech_research": "Research"
     },
 
     fr: {
@@ -182,7 +184,8 @@ const UI = {
         "proj.link_tally": "Test Orientation (Tally)",
         "proj.link_user_guide": "Manuel d'Utilisation (PDF)",
         "proj.link_thackavoir": "Concours (THackaVoir)",
-        "proj.link_thackavoir_page": "Page du projet (THackaVoir)",
+        "proj.link_thackavoir_page": "Page du projet (THackaVoir)",        
+        "proj.link_bhealthcare": "Site de BHealthCare",
         "proj.prev": "Projet précédent",
         "proj.next": "Projet suivant",
 
@@ -202,7 +205,8 @@ const UI = {
         "placeholder.tech_json": "JSON",
         "placeholder.tech_python": "Python",
         "placeholder.tech_3dmodel": "Modélisation 3D",
-        "placeholder.tech_uml": "UML"
+        "placeholder.tech_uml": "UML",
+        "placeholder.tech_research": "Recherche"
     }
 };
 
@@ -227,18 +231,52 @@ const PROJECTS = {
         year: "4A",
         en: {
             title: "Study and Research Project (TER)",
-            desc: "Research and study project carried out during the fourth year."
+            desc: "Fourth-year project: researching robotic solutions for blood sampling, with a state-of-the-art review as the deliverable.",
+
+            context01: "A project spanning the whole fourth year (4A SRI). Our group of six works for the company BHealthCare, which develops, among other things, an autonomous blood-sampling robot (Heiva). In this project, called TER (Travaux d'Études et de Recherche, i.e. Study and Research Project), we must produce a state of the art on four themes related to Heiva: robotic techniques, imaging techniques, trajectory accuracy and the hardware to use. We will then be able to focus on a solution that we will try to bring to BHealthCare.",
+            context02: "Ongoing project: content to come.",
+
+            role01: "Ongoing project: content to come.",
+
+            results01: "Ongoing project: content to come."
         },
         fr: {
             title: "Travaux d'Études et de Recherche (TER)",
-            desc: "Projet d'études et de recherche réalisé en quatrième année."
+            desc: "Projet de quatrième année : recherche de solutions robotiques pour le prélèvement sanguin, avec la production d'un état de l'art.",
+
+            context01: "Projet couvrant toute la quatrième année (4A SRI). Notre groupe de six personnes travaille pour l'entreprise BHealthCare, qui développe notamment un robot autonome pour le prélèvement sanguin (Heiva). Dans ce projet du nom de TER, pour Travaux d'Études et de Recherche, nous devons produire un état de l'art sur quatre thèmes liés à Heiva : Techniques de robotiques, Techniques d'imagerie, Précision de la trajectoire et Matériel à utiliser. Nous pourrons ensuite se concentrer sur une solution que nous essaierons d'apporter à BHealthCare.",
+            context02: "Projet en cours : contenu à venir.",
+
+            role01: "Projet en cours : contenu à venir.",
+
+            results01: "Projet en cours : contenu à venir."
         }
     },
     pfr: {
         year: "3A",
         en: {
             title: "Fil Rouge Project (PFR)",
-            desc: "Long-running team project carried out over the third year."
+            desc: "Third-year project: designing a mobile robot controlled by text commands, voice commands or a web interface, able to map a room and find coloured balls. A first phase of simulation in C and Python, then a phase of building the real robot.",
+
+            context01: "The Fil Rouge Project (PFR, a “common thread” project) is the integration project of the third year (3A SRI). It runs all year long and brings together the skills seen in class: C and Python programming, image processing, embedded systems, project management. There were five of us, from different academic backgrounds, supervised by a tutor who acted as client, adviser and assessor at once. It was up to us to book meetings with him, to regularly present our progress and to get our technical choices validated. The overall goal was to design a mobile robot that a user controls by voice or by text, and that can detect coloured objects in its environment. The project is split into two very different phases.",
+            context02: "Phase 1 (PFR1, September to January): the simulation. The aim was to develop the robot's software building blocks without a robot, mainly in C on Linux, with a bit of Python. We began by writing a specification document: description of the features, diagrams, error handling, a provisional schedule in the form of a Gantt chart, and the allocation of tasks. The development had three blocks. The first turns a typed or spoken sentence (“move forward two metres then turn left”) into standardised commands. The words and languages come from JSON configuration files rather than from the code, and the program works in French, English and Spanish. The second is an image-processing module that detects and characterises objects (coloured balls) in supplied photos, without any dedicated library: we had to write the algorithms ourselves. The third is a Python simulation (turtle library) that moves the robot around a warehouse with walls, openings and balls.",
+            context03: "Phase 2 (PFR2, February to May): the real robot. Each group received a crate of loose parts and had to assemble and validate a robot, then integrate the building blocks from phase 1 into it. We had to implement the control modes (manual, text, voice, automatic), mapping of the room with a LiDAR, ball detection with an onboard camera and obstacle detection, and set up the communications between the computer, the Raspberry Pi and the Arduino. We justified our architecture and assembly choices, then presented a report, an oral defence and a demonstration.",
+
+            role01: "Phase 1 (simulation). The whole team took part in writing the specification document. In the allocation of tasks given in that document, with its Gantt chart, image processing was assigned to a pair: so we started on this module as two. At the end of the specification document, I created the project's Git repository. From the coding phase onwards, I also handled the exchanges with the tutor on behalf of the group: booking meetings and sending progress reports by email.",
+            role02: "I then developed most of the image-processing module in C. It loads an image as colour matrices, then binarises it (background at 0, objects at 1). A labelling step then numbers each object (the first one as 1, the second as 2, and so on), so that they can be processed separately. For each object, the colour is determined by quantising each pixel and then computing a histogram from which the dominant colour is kept. The shape is determined by computing the circularity, which decides whether or not the object is a ball. Finally, the module computes more advanced characteristics: bounding box, centre and position of the object in the image. Every step produces log files so that the results can be checked. This module had its own Git branch, a first for me.",
+            role03: "In the last weeks, I handled a large part of the integration: connecting image processing to the text and voice commands and to the Python simulation, with help from teammates for the missing functions. The idea was to bring everything together in a single main.c file. We then built the demonstration scenarios together and rehearsed until the validation.",
+            role04: "Phase 2 (real robot). After a group phase of hardware testing, the work was split between two teams: one on the Raspberry Pi (server, camera, LiDAR, voice), the other on the Arduino (motors, sensors, Bluetooth). I tested the Arduino Mega board with the Arduino environment, and the LiDAR, of which I got a first visualisation with the Slamtec software. I also installed the Raspberry Pi's operating system on the SD card. Midway through the project, I started modelling 3D supports for the ultrasonic sensors, thanks to the FabLab training I had taken the year before, then handed this task over to a teammate.",
+            role05: "I took part in designing the Python script `pilote_robot.py`, which links the Raspberry Pi to the Arduino: it reads the actions to perform, translates them into bytes and sends them over the USB serial port. This script was then extended by each member of the group to integrate their own part. I then took part in the experimentation phase: making the robot move a precise distance and rotate by a given angle, which required measuring, adjusting and finding calibration formulas, which I integrated into the code.",
+            role06: "I also coded, with a teammate, the ball detection in `pilote_robot.py`, as a continuation of phase 1. The camera image is converted to HSV, a colour mask isolates the requested ball, then the program keeps the most circular contour. From its centre and radius, the robot estimates the ball's angle and distance, turns, and approaches it from a single photo. If no ball is visible, it spins on the spot to widen its field of view.",
+            role07: "Our group also added a loudspeaker that works as a horn, an initiative that was well received and that was not required by the brief. It goes off when the robot approaches a wall, a moment before the robot stops to avoid the collision, and can also be used from the interface.",
+            role08: "Finally, I took part in the tests and final adjustments, then in preparing the demonstration, and I stayed in touch with the tutor through regular progress reports. The other members worked in particular on the text and voice commands, the automatic mode, the web interface and the mapping.",
+
+            results01: "Phase 1. The simulation works from end to end: the user writes or says a command, the C program standardises it in the three languages, and the simulation moves the robot around the warehouse. It can find a ball of a given colour and stops in front of walls instead of going through them. The main challenge was making C and Python coexist through shared files (commands, ball positions, JSON configuration).",
+            results02: "This phase gave me three difficulties. The first concerned the data structures: we had planned three structures for the image, the shape and the object, but the Shape structure became more and more blurry. At the end of the phase, I merged Shape and Object, which removed two files. The second concerned locating a pixel: two coordinate systems were used at the same time, row-column as for a matrix and x-y for the calculations, which caused confusion. I chose to keep only the first. The third concerned Git: when merging my image branch into the main branch, I ran into my first merge conflicts. I was a little lost at first, but I learned how to resolve them.",
+            results03: "Phase 2. The final robot can be controlled in four ways: by keyboard, by voice (in three languages), with a digital joystick on a web interface, or automatically. In automatic mode, the robot moves forward and turns as soon as its ultrasonic sensors detect an obstacle. It finds coloured balls on request (“find the blue ball”). The LiDAR produces a 2D map of the room. The architecture separates a Raspberry Pi, which handles processing and communication, from an Arduino, which handles real time, the motors and the sensors.",
+            results04: "The goal for the LiDAR was more ambitious: to work in real time and reuse its data for other tasks, such as localisation or navigation. We were not able to implement it. The LiDAR is therefore only used to produce the map of the room at a given moment, saved as an image displayed in the interface.",
+            results05: "Tests in real conditions revealed several limits: noisy ultrasonic sensors with false alarms, colour thresholds to be tuned according to the light, movement calibration that differs depending on the floor, a faulty battery during demonstrations, and network latency. A defective Arduino board and a defective camera had to be replaced.",
+            results06: "What I take away from it. Phase 2 confronted me with the difference between a solution that works in simulation and behaviour that is reliable on a real robot. I only had a theoretical background in hardware and had to learn everything on the job. The many real tests led me to adopt a more rigorous method: measure, adjust, redo. I also went through a formative disappointment: the image module from phase 1, developed over dozens of hours, could not be reused. It was poorly suited to real conditions and was replaced by a few lines of OpenCV. I take away from it the importance of knowing the existing, optimised libraries rather than reprogramming everything. Finally, this is the project that taught me the most about teamwork and working with a client: specifications, schedule, allocation of roles, progress reports, integration of separately written modules and using Git as a team of five."
         },
         fr: {
             title: "Projet Fil Rouge (PFR)",
@@ -269,7 +307,19 @@ const PROJECTS = {
         year: "3A",
         en: {
             title: "Pirate Game (JAVA)",
-            desc: "Game project developed during the third year."
+            desc: "Third-year project: a board game in Java, played in the console: dice rolls, moving along a 30-square board and special squares with various effects. The project is documented with UML diagrams.",
+
+            context01: "This project was carried out in the third year, as part of the object-oriented programming course, individually. It involved programming a board game in Java, “The Pirates”, and documenting it with UML diagrams. Two pirates, Jack Le Borgne and Bill Jambe de Bois, face each other: each starts on square 1 with 5 life points, rolls the dice in turn and moves along the board. The game ends when a player reaches the last square, or when the other has no life points left.",
+            context02: "The brief asked us to invent our own special squares: each student therefore ended up with a slightly different game. The aim was to put the principles of object-oriented programming into practice (classes, inheritance, abstraction, polymorphism, interfaces) and to learn to model them with UML before and after the code.",
+
+            role01: "I carried out the whole project on my own: design, code, tests and documentation.",
+            role02: "I came up with three special squares, in addition to the normal squares with no effect. The Russian Roulette square teleports the player to a random square on the board. The Life Steal square lets the player steal one life point from their opponent. The Swap square triggers a coin toss: on “Heads”, the two players swap positions; on “Tails”, they swap life points. The board has 30 squares, and a player who goes past the last square turns back by the number of excess squares.",
+            role03: "On the code side, I organised the program into several packages: a game package (Jeu, Plateau, Joueur, De, Couleur), a squares package and a display package. All the squares inherit from an abstract class Case that requires a method `declencherAction`. The running of the game therefore does not need to know the type of the square: it simply calls the same method, and each square reacts in its own way (polymorphism). Adding a new square amounts to creating a new class, without changing the rest of the logic. The display is isolated in its own class, defined by an interface, which separates the rules of the game from what the player sees.",
+            role04: "I then produced four UML diagrams: the class diagram, a system sequence diagram on a player's move, and two detailed sequence diagrams for the Russian Roulette and Life Steal squares. The code is published on GitHub.",
+
+            results01: "The game works from end to end: you start a game, each turn is displayed in the console (dice result, square reached, life points, action triggered) and the game ends with the announcement of the winner, as the screenshots of a run show.",
+            results02: "This project taught me to go from a brief to an architecture before writing the code, to read and draw UML diagrams, to use inheritance and polymorphism to make a program extensible, and to separate logic from display. I also saw the value of splitting code into small classes that each have a single responsibility.",
+            results03: "Several improvements are possible: adding new types of squares, allowing more than two players, creating a graphical interface in place of the console..."
         },
         fr: {
             title: "Jeu des Pirates (JAVA)",
@@ -292,7 +342,20 @@ const PROJECTS = {
         year: "L2",
         en: {
             title: "IJA - “Connected Speakers” Prototyping",
-            desc: "Prototyping project around connected speakers, second year."
+            desc: "Second-year project: a prototype of connected speakers controlled by a remote control, designed to help young visually impaired children find their bearings and move around at the IJA in Toulouse.",
+
+            context01: "This project was carried out in the second year of CUPGE (the preparatory cycle), as part of the 8th edition of the ThacKaVoir competition (2025). The competition entrusts students with building devices imagined by specialised teachers of the Institut des Jeunes Aveugles (IJA, an institute for blind young people) in Toulouse for their pupils. Our group of four chose the “Connected Speakers” topic, put forward by a locomotion instructor at the IJA, who was our client.",
+            context02: "Her need: to help young children with a severe visual impairment find their bearings and move around the Early Childhood unit. Speakers placed above the doors play a sound cue (“Playroom”, “Snack room”…), triggered remotely with a remote control whose buttons are easy to tell apart. The device also serves to develop the children's autonomy, as they can reach a point of interest on their own, and to work on spatial localisation and auditory pointing by placing the speakers around the child.",
+            context03: "The specifications notably required mobile, battery-powered speakers, a sound that is easy to change, and communication without Wi-Fi, which is impossible to install at the IJA. Beyond the technical side, the project involved real client relations: understanding the need of a person who knows the children and how they use things, reformulating the specifications and presenting our progress to her.",
+
+            role01: "I first trained at the FabLab to use the 3D printers and the laser cutter. During the brainstorming, in which we all took part, I proposed key ideas: the means of communication (Wi-Fi at first) and a magnetic system to easily move the speakers from one place to another. For lack of time, this system could not be developed.",
+            role02: "I then modelled the remote control in 3D with Tinkercad. The buttons have raised shapes (square, star, cross, circle, triangle) arranged so that two neighbouring shapes are very different, like the circle next to the star and the cross, to help the children tell them apart by touch.",
+            role03: "I then tested a first solution using Wi-Fi. I installed and configured a Raspberry Pi 3, then coded in Python a Flask server with routes to start and stop a sound on a speaker connected via Bluetooth. I also wired two buttons onto a prototyping board connected to the Raspberry Pi and wrote a second program to read them. Getting the two programs to communicate proved difficult. As Wi-Fi could not be used at the IJA anyway, we switched to a radio link.",
+            role04: "For the final version, I built the assemblies for three blocks from diagrams found online: a transmitter for the remote control (Arduino Uno board, radio transmitter, two buttons) and two receivers for the speakers (Arduino Uno, radio receiver, MP3 player connected to a speaker). Finally, I learned tin soldering to obtain a more compact remote control, with fewer visible wires.",
+
+            results01: "The final prototype consists of a remote control with two buttons and two speakers. Pressing the first button plays “Playroom” on the first speaker; pressing the second plays “Snack room” on the second.",
+            results02: "On 27 May 2025, we presented it at the IJA to a mixed audience of 50 to 70 people: visually impaired people, companions and supervisors. We then held a stand where everyone could try out the prototypes of the different groups. Our project finished 2nd in the competition, in the audience vote. Indeed, the project was particularly appreciated by the young children. The next day, we presented it again to our teachers. There were therefore two very different presentations: one for the general public, focused on popularisation and use, the other technical, focused on the architecture and design choices.",
+            results03: "It was the first time we could handle hardware with so much freedom (Arduino, Raspberry Pi, radio modules, MP3 player, soldering). I learned to build and test a circuit, to read diagrams, to look for and adapt code, to use AI as an aid without delegating my understanding to it, and to work for a real client, which requires listening, reformulating and adapting to the constraints of the field. This project also helped me confirm my choice of the SRI track (robotic systems) rather than STRI (computer networks). A slight frustration remained at not having been able to take it further."
         },
         fr: {
             title: "IJA - Prototypage « Enceintes connectées »",
@@ -316,7 +379,18 @@ const PROJECTS = {
         year: "L2",
         en: {
             title: "Railway Traffic Management",
-            desc: "Project on managing railway traffic, second year."
+            desc: "Second-year project: a C application, usable in the terminal, that simulates a railway company with three profiles (administrator, ticket inspector, traveller): trip management, itinerary search, reservations and user accounts.",
+
+            context01: "This project was carried out in the second year of CUPGE (UPSSITECH, 2024-2025), in pairs and on Linux. The brief, entitled “THOMAS - a Train to HOme And Stations”, asked us to program in C the management of a railway company: trips made up of stations, and travellers who book seats on one or several trips in a row. The goal was as much organisational as technical: learning to design, program and document a project as a team by sharing out the tasks.",
+            context02: "The program offers three modes of use, with login by ID and password. The administrator manages the trips (adding, modifying, deleting a trip or its stations) and the accounts (changing a password, deleting a user). The ticket inspector checks a traveller's reservations from their ID and can change their own password. The traveller searches for an itinerary between two stations, books it, views their reservations and can cancel them. Passwords are subject to security rules (length, uppercase, lowercase, digit, special character) and are stored encrypted.",
+            context03: "The simulated network has four interconnected trips, outbound and return, with ten seats per train. The search returns a direct trip if there is one, otherwise up to two itineraries with one connection, with the travel time of each leg.",
+
+            role01: "The start of the project was done together: thinking about the architecture, choosing the data structures and writing the first functions. We then shared out the work. I built all the application's menus with the ncurses library: keyboard navigation with the arrow keys, field input, success or error messages, and the sequence of screens for each of the three profiles. Each menu is described by a structure that groups a title and a list of options, each associated with the function it triggers. I also wrote the Makefile that compiles the project.",
+            role02: "My partner took care of producing real documentation of the code with Doxygen. We presented the project to our teacher in an oral defence with a demonstration, with no written report.",
+
+            results01: "The application works from end to end: a traveller can create an account, log in, search for an itinerary, book it, view it and then cancel it, and the ticket inspector can check their reservations. The available seats are updated at each reservation and cancellation, and the program refuses a duplicate reservation or a full train.",
+            results02: "The main challenge was keeping the data between two runs. We stored the users, their reservations and the trips in JSON files, which we handle with the cJSON library: it was the first time we used this format. We also used stacks, seen in class a little earlier in the semester, to represent the stations of a trip, to insert or delete a station, and to compute the return trip by reversing the times. It was also our second use of GitHub, with a smoother organisation than on the previous project.",
+            results03: "This project taught me to structure a terminal interface with ncurses, to read and write JSON data in C, to use stacks and function pointers in a real program, and to share the work within a pair. Areas for improvement: replacing the password encryption, which is a simple character shift, with proper hashing, and handling connections with more than one change."
         },
         fr: {
             title: "Gestion d'un trafic ferroviaire",
@@ -338,7 +412,16 @@ const PROJECTS = {
         year: "L2",
         en: {
             title: "Lorenz Attractor",
-            desc: "Project on the Lorenz attractor, second year."
+            desc: "Second-year project: a C program that simulates and plots the trajectory of a point from differential equations: the Lorenz attractor, the Van der Pol oscillator and the harmonic oscillator.",
+
+            context01: "A C programming project carried out in the second year of CUPGE (2024-2025), in pairs. The brief asked us to represent the trajectory of a point from the equations that define its velocity as a function of its position. With the Lorenz equations, a famous system used to illustrate chaos, the position of the point is computed step by step with a small time increment dt, then the 3D curve is displayed with Gnuplot. The basic goal was to plot the attractor from the position (1, 2, 3) with σ = 10, ρ = 28 and β = 8/3. We added several extensions: user input of the parameters, a choice between three dynamical systems, and a structure common to the systems (initialisation functions, update functions and parameters) so that more can easily be added.",
+
+            role01: "We worked together on almost the whole project: designing the program, writing the simulation functions and the main function, testing, then writing the report. We also set up the GitHub repository together, along with the organisation of the folders (sources, headers, libraries, executables, test data and documentation).",
+            role02: "I wrote the Makefile on my own. It automates the compilation of the source files, the creation of the object files and the linking of the final executable. It allows the whole project to be rebuilt with a single command, without typing each step by hand.",
+
+            results01: "The program works for the three systems: it asks the user for the parameters, computes the trajectory, saves it with the position, the velocities and the total speed at each instant, and allows the curves to be plotted with Gnuplot. It checks the memory allocations and the user's choices, and frees the memory before exiting.",
+            results02: "It was our first use of GitHub, and it was our main source of difficulty. We had to understand how to share a repository, make regular commits, retrieve the other's work and avoid getting in each other's way by editing the same files. This learning was useful: Git is an almost indispensable tool for working with others on code.",
+            results03: "This project also taught me to code in C, that is, to split a program into modules rather than putting everything in a single file, to manage memory, to use function pointers to handle several systems in the same way, and to automate compilation with Make."
         },
         fr: {
             title: "Attracteur de Lorenz",
@@ -358,7 +441,26 @@ const PROJECTS = {
         year: "L1",
         en: {
             title: "Professional Project",
-            desc: "Professional project carried out during the first year."
+            desc: "First-year project: as a digital support group, we provided the six other groups with the tools they needed (shared storage, a guidance quiz, an assessment grid).",
+
+            context01: "Carried out in the first year of preparatory classes, the “Professional Project” aims to understand the engineer's world. The main goal is to question as many people as possible around this profession: engineers (notably by organising a round table), students and human resources staff. Shared by the whole year group, about 120 students, we were split into 7 different groups: Coordination, Events, Cross-cutting Support, Engineer Meetings, Student Meetings, HR Meetings and Pathway Guides.",
+            context02: "Here is the work of each team:",
+            context03: "• Coordination: link between the groups and the teachers. Passing on instructions, weekly summaries of progress, monitoring deadlines, helping to resolve conflicts.",
+            context04: "• Events: organising the round table with six engineers from different backgrounds (invitations, replies, questions, logistics), preparing the interim review and the final review.",
+            context05: "• Cross-cutting Support: digital tools for the other groups. A shared Drive to centralise documents, a guidance quiz for the Pathway Guides and self-assessment questionnaires.",
+            context06: "• Engineer Meetings: a common questionnaire, meetings with engineers of varied profiles, shared reports and a final presentation (career paths, daily life, career development, salaries, advice).",
+            context07: "• Student Meetings: creating a questionnaire, interviewing students, analysing the results and writing reports.",
+            context08: "• HR Meetings: contacting companies (33 contacted, 15 met), discussions with HR professionals, then a presentation on recruitment, the application file, the job interview and training.",
+            context09: "• Pathway Guides: updating an online guide to the courses leading to the engineering profession. Sorting more than 200 courses and 8 competitive exams, “Fields and Careers” sheets, videos, podcasts, a map of courses and a guidance quiz.",
+
+            role01: "The project started with a presentation meeting, after which each student could choose a group. I therefore joined the Cross-cutting Support group and volunteered to be its main representative.",
+            role02: "At the start of the project, I took care of creating the Drive folder needed to share documents across the whole year group. With a few of my classmates, we managed the access rights: each group could edit its own folder but not those of the other teams. Difficulty: using the university email address was compulsory, but some people had trouble creating a Google account with that address. We therefore designed and shared a video tutorial to support them better.",
+            role03: "The “Pathway Guides” group needed a questionnaire based on this principle: you give your three favourite subjects and it returns a matching field. I therefore designed this questionnaire with the online tool Tally, whose free version is satisfactory compared with its competitors SurveyMonkey and Typeform, which we also tried.",
+            role04: "The work that took us the most time was the assessment part. The aim was for our team to find an effective way to assess each person. These assessments, later given to the teaching team, were used to set the actual grades. We therefore decided to create a Google Form for each group, in which everyone could rate their classmates out of five on different criteria (Attendance, Initiative, Involvement, Team spirit...), anonymously. The challenge was to have supportive criteria so that students would be as honest as possible, and not only give a good mark to their “friends”, for example. Having already acquired some knowledge of Excel, I took care of linking the Google Forms to Google Sheets so that the spreadsheets could be edited: each student's marks and average, the average of each criterion, etc. In addition to these assessments, we gave the whole year group satisfaction questionnaires about, among other things, the work of the other groups and the overall feeling about the project.",
+            role05: "As the group's representative, I was in charge of communication with our coordinator and the teachers. This took the form of emails as well as face-to-face discussion points.",
+
+            results01: "The many questionnaires led to results that were often conclusive. Students were willing enough to take part in the group assessments, so each person could get a relatively objective mark against the criteria. However, the statistics also show that nearly half of the year group did not feel the need to call on our group. This is partly explained by the fact that some people do not need us to create an Excel-type file for them because they already have the skills to do it, which means our role in the project was sometimes unclear.",
+            results02: "On a personal level, this project taught me in particular to work in a team, since the number of people involved was considerable. With the representative role, I got to experience interesting responsibilities such as decision-making. I was also able to improve my use of tools such as Google Drive and Google Sheets thanks to the large-scale work that was carried out."
         },
         fr: {
             title: "Projet Professionnel",
