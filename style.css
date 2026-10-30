@@ -1064,7 +1064,6 @@ html[data-lang="fr"] .lang-btn [data-l="fr"] {
     margin: 0;
     overflow: hidden;
     border-radius: var(--radius);
-    border: 1px solid var(--line);
 }
 .gallery figure img {
     display: block;
@@ -1107,7 +1106,6 @@ html[data-lang="fr"] .lang-btn [data-l="fr"] {
     width: min(100%, 20rem);
     aspect-ratio: 9 / 16;
     overflow: hidden;
-    border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--surface);
 }

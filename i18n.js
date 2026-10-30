@@ -244,7 +244,7 @@ const PROJECTS = {
             title: "Travaux d'Études et de Recherche (TER)",
             desc: "Projet de quatrième année : recherche de solutions robotiques pour le prélèvement sanguin, avec la production d'un état de l'art.",
 
-            context01: "Projet couvrant toute la quatrième année (4A SRI). Notre groupe de six personnes travaille pour l'entreprise BHealthCare, qui développe notamment un robot autonome pour le prélèvement sanguin (Heiva). Dans ce projet du nom de TER, pour Travaux d'Études et de Recherche, nous devons produire un état de l'art sur quatre thèmes liés à Heiva : Techniques de robotiques, Techniques d'imagerie, Précision de la trajectoire et Matériel à utiliser. Nous pourrons ensuite se concentrer sur une solution que nous essaierons d'apporter à BHealthCare.",
+            context01: "Projet couvrant toute la quatrième année (4A SRI). Notre groupe de six personnes travaille pour l'entreprise BHealthCare, qui développe notamment un robot autonome pour le prélèvement sanguin (Heiva). Dans ce projet du nom de TER, pour Travaux d'Études et de Recherche, nous devons produire un état de l'art sur quatre thèmes liés à Heiva : Techniques de robotiques, Techniques d'imagerie, Précision de la trajectoire et Matériel à utiliser. Nous pourrons ensuite se concentrer sur une solution que nous essairons d'apporter à BHealthCare.",
             context02: "Projet en cours : contenu à venir.",
 
             role01: "Projet en cours : contenu à venir.",
@@ -276,7 +276,12 @@ const PROJECTS = {
             results03: "Phase 2. The final robot can be controlled in four ways: by keyboard, by voice (in three languages), with a digital joystick on a web interface, or automatically. In automatic mode, the robot moves forward and turns as soon as its ultrasonic sensors detect an obstacle. It finds coloured balls on request (“find the blue ball”). The LiDAR produces a 2D map of the room. The architecture separates a Raspberry Pi, which handles processing and communication, from an Arduino, which handles real time, the motors and the sensors.",
             results04: "The goal for the LiDAR was more ambitious: to work in real time and reuse its data for other tasks, such as localisation or navigation. We were not able to implement it. The LiDAR is therefore only used to produce the map of the room at a given moment, saved as an image displayed in the interface.",
             results05: "Tests in real conditions revealed several limits: noisy ultrasonic sensors with false alarms, colour thresholds to be tuned according to the light, movement calibration that differs depending on the floor, a faulty battery during demonstrations, and network latency. A defective Arduino board and a defective camera had to be replaced.",
-            results06: "What I take away from it. Phase 2 confronted me with the difference between a solution that works in simulation and behaviour that is reliable on a real robot. I only had a theoretical background in hardware and had to learn everything on the job. The many real tests led me to adopt a more rigorous method: measure, adjust, redo. I also went through a formative disappointment: the image module from phase 1, developed over dozens of hours, could not be reused. It was poorly suited to real conditions and was replaced by a few lines of OpenCV. I take away from it the importance of knowing the existing, optimised libraries rather than reprogramming everything. Finally, this is the project that taught me the most about teamwork and working with a client: specifications, schedule, allocation of roles, progress reports, integration of separately written modules and using Git as a team of five."
+            results06: "What I take away from it. Phase 2 confronted me with the difference between a solution that works in simulation and behaviour that is reliable on a real robot. I only had a theoretical background in hardware and had to learn everything on the job. The many real tests led me to adopt a more rigorous method: measure, adjust, redo. I also went through a formative disappointment: the image module from phase 1, developed over dozens of hours, could not be reused. It was poorly suited to real conditions and was replaced by a few lines of OpenCV. I take away from it the importance of knowing the existing, optimised libraries rather than reprogramming everything. Finally, this is the project that taught me the most about teamwork and working with a client: specifications, schedule, allocation of roles, progress reports, integration of separately written modules and using Git as a team of five.",
+
+            cap01: "The box of hardware provided at the start of phase 2",
+            cap02: "Result of the LiDAR mapping",
+            cap03: "Hardware architecture of the robot",
+            cap04: "Manual control via the EduConnect app"
         },
         fr: {
             title: "Projet Fil Rouge (PFR)",
@@ -300,7 +305,12 @@ const PROJECTS = {
             results03: "Phase 2. Le robot final se pilote de quatre manières : au clavier, à la voix (en trois langues), avec un joystick numérique sur une interface web, ou automatiquement. En mode automatique, le robot avance et tourne dès que ses capteurs à ultrasons détectent un obstacle. Il retrouve des balles de couleur à la demande (« trouve la balle bleue »). Le LiDAR produit une carte 2D de la pièce. L'architecture sépare une Raspberry Pi, qui gère le traitement et la communication, d'un Arduino, qui gère le temps réel, les moteurs et les capteurs.",
             results04: "L'objectif pour le LiDAR était plus ambitieux : travailler en temps réel et réutiliser ses données pour d'autres tâches, comme la localisation ou la navigation. Nous n'avons pas pu l'implémenter. Le LiDAR sert donc seulement à produire la carte de la pièce à un instant donné, enregistrée dans une image affichée dans l'interface.",
             results05: "Les tests en conditions réelles ont mis en évidence plusieurs limites : capteurs à ultrasons bruyants avec de fausses alertes, seuils de couleur à régler selon la lumière, calibration des déplacements différente selon le sol, batterie défaillante pendant des démonstrations, et latence du réseau. Une carte Arduino et une caméra défectueuses ont dû être remplacées.",
-            results06: "Ce que j'en retiens. La phase 2 m'a confronté à la différence entre une solution qui marche en simulation et un comportement fiable sur un vrai robot. Je n'avais qu'un bagage théorique du matériel et j'ai dû tout apprendre sur le tas. Les nombreux tests réels m'ont fait adopter une méthode plus rigoureuse : mesurer, ajuster, refaire. J'ai aussi vécu une déception formatrice : le module d'image de la phase 1, développé pendant des dizaines d'heures, n'a pas pu être réutilisé. Il était peu adapté aux conditions réelles et a été remplacé par quelques lignes d'OpenCV. J'en retiens l'importance de connaître les bibliothèques existantes et optimisées plutôt que de tout reprogrammer. Enfin, c'est le projet qui m'a le plus appris sur le travail en équipe et la relation avec un client : cahier des charges, planning, répartition des rôles, comptes rendus, intégration de modules écrits séparément et utilisation de Git à cinq."
+            results06: "Ce que j'en retiens. La phase 2 m'a confronté à la différence entre une solution qui marche en simulation et un comportement fiable sur un vrai robot. Je n'avais qu'un bagage théorique du matériel et j'ai dû tout apprendre sur le tas. Les nombreux tests réels m'ont fait adopter une méthode plus rigoureuse : mesurer, ajuster, refaire. J'ai aussi vécu une déception formatrice : le module d'image de la phase 1, développé pendant des dizaines d'heures, n'a pas pu être réutilisé. Il était peu adapté aux conditions réelles et a été remplacé par quelques lignes d'OpenCV. J'en retiens l'importance de connaître les bibliothèques existantes et optimisées plutôt que de tout reprogrammer. Enfin, c'est le projet qui m'a le plus appris sur le travail en équipe et la relation avec un client : cahier des charges, planning, répartition des rôles, comptes rendus, intégration de modules écrits séparément et utilisation de Git à cinq.",
+
+            cap01: "Boîte du matériel fournie au début de la phase 2",
+            cap02: "Résultat de la cartographie LiDAR",
+            cap03: "Architecture matérielle du robot",
+            cap04: "Pilotage manuel via l'application EduConnect"
         }
     },
     pirates: {
@@ -319,7 +329,10 @@ const PROJECTS = {
 
             results01: "The game works from end to end: you start a game, each turn is displayed in the console (dice result, square reached, life points, action triggered) and the game ends with the announcement of the winner, as the screenshots of a run show.",
             results02: "This project taught me to go from a brief to an architecture before writing the code, to read and draw UML diagrams, to use inheritance and polymorphism to make a program extensible, and to separate logic from display. I also saw the value of splitting code into small classes that each have a single responsibility.",
-            results03: "Several improvements are possible: adding new types of squares, allowing more than two players, creating a graphical interface in place of the console..."
+            results03: "Several improvements are possible: adding new types of squares, allowing more than two players, creating a graphical interface in place of the console...",
+
+            cap01: "Example of the start of a game in the console",
+            cap02: "Example of the end of a game in the console"
         },
         fr: {
             title: "Jeu des Pirates (JAVA)",
@@ -335,7 +348,10 @@ const PROJECTS = {
 
             results01: "Le jeu fonctionne de bout en bout : on lance une partie, chaque tour est affiché dans la console (résultat des dés, case atteinte, point de vie, action déclenchée) et la partie se termine par l'annonce du vainqueur, comme le montrent les captures d'exécution.",
             results02: "Ce projet m'a appris à passer d'un énoncé à une architecture avant d'écrire le code, à lire et dessiner des diagrammes UML, à utiliser l'héritage et le polymorphisme pour rendre un programme extensible, et à séparer logique et affichage. J'ai aussi vu l'intérêt de découper en petites classes ayant chacune une seule responsabilité.",
-            results03: "Plusieurs pistes d'amélioration sont envisageables : ajouter de nouveaux types de cases, permettre plus de deux joueurs, créer une interface graphique à la place de la console..."
+            results03: "Plusieurs pistes d'amélioration sont envisageables : ajouter de nouveaux types de cases, permettre plus de deux joueurs, créer une interface graphique à la place de la console...",
+
+            cap01: "Illustration d'un début de partie dans la console",
+            cap02: "Illustration d'une fin de partie dans la console"
         }
     },
     ija: {
@@ -355,7 +371,11 @@ const PROJECTS = {
 
             results01: "The final prototype consists of a remote control with two buttons and two speakers. Pressing the first button plays “Playroom” on the first speaker; pressing the second plays “Snack room” on the second.",
             results02: "On 27 May 2025, we presented it at the IJA to a mixed audience of 50 to 70 people: visually impaired people, companions and supervisors. We then held a stand where everyone could try out the prototypes of the different groups. Our project finished 2nd in the competition, in the audience vote. Indeed, the project was particularly appreciated by the young children. The next day, we presented it again to our teachers. There were therefore two very different presentations: one for the general public, focused on popularisation and use, the other technical, focused on the architecture and design choices.",
-            results03: "It was the first time we could handle hardware with so much freedom (Arduino, Raspberry Pi, radio modules, MP3 player, soldering). I learned to build and test a circuit, to read diagrams, to look for and adapt code, to use AI as an aid without delegating my understanding to it, and to work for a real client, which requires listening, reformulating and adapting to the constraints of the field. This project also helped me confirm my choice of the SRI track (robotic systems) rather than STRI (computer networks). A slight frustration remained at not having been able to take it further."
+            results03: "It was the first time we could handle hardware with so much freedom (Arduino, Raspberry Pi, radio modules, MP3 player, soldering). I learned to build and test a circuit, to read diagrams, to look for and adapt code, to use AI as an aid without delegating my understanding to it, and to work for a real client, which requires listening, reformulating and adapting to the constraints of the field. This project also helped me confirm my choice of the SRI track (robotic systems) rather than STRI (computer networks). A slight frustration remained at not having been able to take it further.",
+
+            cap01: "Sketch: layout of the speakers for working on localisation and auditory pointing",
+            cap02: "Sketch: the Early Childhood corridor (IJA)",
+            cap03: "3D model of the remote control"
         },
         fr: {
             title: "IJA - Prototypage « Enceintes connectées »",
@@ -372,7 +392,11 @@ const PROJECTS = {
 
             results01: "Le prototype final comprend une télécommande à deux boutons et deux enceintes. Un appui sur le premier bouton fait jouer « Salle de jeu » sur la première enceinte, un appui sur le second fait jouer « Salle de goûter » sur la deuxième.",
             results02: "Le 27 mai 2025, nous l'avons présenté à l'IJA devant un public mixte de 50 à 70 personnes : personnes déficientes visuelles, accompagnants, encadrants. Nous avons ensuite tenu un stand où chacun pouvait essayer les prototypes des différents groupes. Notre projet a terminé 2e du concours, aux votes du public. En effet, le projet a été particulièrement apprécié des jeunes enfants. Le lendemain, nous l'avons présenté de nouveau à nos enseignants. Il y a donc eu deux présentations très différentes : l'une grand public, axée sur la vulgarisation et l'usage, l'autre technique, axée sur l'architecture et les choix de conception.",
-            results03: "C'est la première fois que nous pouvions manipuler du matériel avec autant de liberté (Arduino, Raspberry Pi, modules radio, lecteur MP3, soudure). J'y ai appris à monter et tester un circuit, à lire des schémas, à chercher et adapter du code, à utiliser l'IA comme aide sans lui déléguer la compréhension, et à travailler pour une vraie cliente, ce qui impose d'écouter, de reformuler et de s'adapter aux contraintes du terrain. Ce projet m'a aussi aidé à confirmer mon orientation vers la filière SRI (systèmes robotiques) plutôt que STRI (réseaux informatiques). Il m'est resté une légère frustration de ne pas avoir pu le pousser plus loin."
+            results03: "C'est la première fois que nous pouvions manipuler du matériel avec autant de liberté (Arduino, Raspberry Pi, modules radio, lecteur MP3, soudure). J'y ai appris à monter et tester un circuit, à lire des schémas, à chercher et adapter du code, à utiliser l'IA comme aide sans lui déléguer la compréhension, et à travailler pour une vraie cliente, ce qui impose d'écouter, de reformuler et de s'adapter aux contraintes du terrain. Ce projet m'a aussi aidé à confirmer mon orientation vers la filière SRI (systèmes robotiques) plutôt que STRI (réseaux informatiques). Il m'est resté une légère frustration de ne pas avoir pu le pousser plus loin.",
+
+            cap01: "Croquis : disposition des enceintes pour le travail de localisation et de pointage auditif",
+            cap02: "Croquis : couloir de la Petite Enfance (IJA)",
+            cap03: "Modélisation 3D de la télécommande"
         }
     },
     trains: {
@@ -390,7 +414,17 @@ const PROJECTS = {
 
             results01: "The application works from end to end: a traveller can create an account, log in, search for an itinerary, book it, view it and then cancel it, and the ticket inspector can check their reservations. The available seats are updated at each reservation and cancellation, and the program refuses a duplicate reservation or a full train.",
             results02: "The main challenge was keeping the data between two runs. We stored the users, their reservations and the trips in JSON files, which we handle with the cJSON library: it was the first time we used this format. We also used stacks, seen in class a little earlier in the semester, to represent the stations of a trip, to insert or delete a station, and to compute the return trip by reversing the times. It was also our second use of GitHub, with a smoother organisation than on the previous project.",
-            results03: "This project taught me to structure a terminal interface with ncurses, to read and write JSON data in C, to use stacks and function pointers in a real program, and to share the work within a pair. Areas for improvement: replacing the password encryption, which is a simple character shift, with proper hashing, and handling connections with more than one change."
+            results03: "This project taught me to structure a terminal interface with ncurses, to read and write JSON data in C, to use stacks and function pointers in a real program, and to share the work within a pair. Areas for improvement: replacing the password encryption, which is a simple character shift, with proper hashing, and handling connections with more than one change.",
+
+            cap01: "Main menu",
+            cap02: "Menu: log in",
+            cap03: "Administrator menu",
+            cap04: "Ticket inspector menu",
+            cap05: "Traveller menu",
+            cap06: "Menu: check a traveller",
+            cap07: "Menu: search for a trip",
+            cap08: "Menu: reservation",
+            cap09: "Diagram showing how the menus are linked"
         },
         fr: {
             title: "Gestion d'un trafic ferroviaire",
@@ -405,7 +439,17 @@ const PROJECTS = {
 
             results01: "L'application est fonctionnelle de bout en bout : un voyageur peut créer un compte, se connecter, rechercher un itinéraire, le réserver, le consulter puis l'annuler, et le contrôleur peut vérifier ses réservations. Les places disponibles sont mises à jour à chaque réservation et annulation, et le programme refuse une réservation en double ou un train complet.",
             results02: "Le principal défi était de conserver les données entre deux exécutions. Nous avons enregistré les utilisateurs, leurs réservations et les trajets dans des fichiers JSON, que nous manipulons avec la bibliothèque cJSON : c'était la première fois que nous utilisions ce format. Nous avons aussi utilisé des piles, vues en cours un peu plus tôt dans le semestre, pour représenter les gares d'un trajet, y insérer ou supprimer une gare, et calculer le trajet retour en inversant les temps. C'était également notre deuxième utilisation de GitHub, avec une organisation plus fluide que sur le projet précédent.",
-            results03: "Ce projet m'a appris à structurer une interface en terminal avec ncurses, à lire et écrire des données JSON en C, à utiliser des piles et des pointeurs de fonctions dans un vrai programme, et à me répartir le travail dans un binôme. Pistes d'amélioration : remplacer le chiffrement des mots de passe, qui est un simple décalage de caractères, par un vrai hachage, et gérer des correspondances à plus d'une étape."
+            results03: "Ce projet m'a appris à structurer une interface en terminal avec ncurses, à lire et écrire des données JSON en C, à utiliser des piles et des pointeurs de fonctions dans un vrai programme, et à me répartir le travail dans un binôme. Pistes d'amélioration : remplacer le chiffrement des mots de passe, qui est un simple décalage de caractères, par un vrai hachage, et gérer des correspondances à plus d'une étape.",
+
+            cap01: "Menu principal",
+            cap02: "Menu : se connecter",
+            cap03: "Menu Administrateur",
+            cap04: "Menu Contrôleur",
+            cap05: "Menu Voyageur",
+            cap06: "Menu : vérifier un voyageur",
+            cap07: "Menu : rechercher un trajet",
+            cap08: "Menu : réservation",
+            cap09: "Schéma représentant l'ordonnancement des menus"
         }
     },
     lorenz: {
@@ -421,7 +465,12 @@ const PROJECTS = {
 
             results01: "The program works for the three systems: it asks the user for the parameters, computes the trajectory, saves it with the position, the velocities and the total speed at each instant, and allows the curves to be plotted with Gnuplot. It checks the memory allocations and the user's choices, and frees the memory before exiting.",
             results02: "It was our first use of GitHub, and it was our main source of difficulty. We had to understand how to share a repository, make regular commits, retrieve the other's work and avoid getting in each other's way by editing the same files. This learning was useful: Git is an almost indispensable tool for working with others on code.",
-            results03: "This project also taught me to code in C, that is, to split a program into modules rather than putting everything in a single file, to manage memory, to use function pointers to handle several systems in the same way, and to automate compilation with Make."
+            results03: "This project also taught me to code in C, that is, to split a program into modules rather than putting everything in a single file, to manage memory, to use function pointers to handle several systems in the same way, and to automate compilation with Make.",
+
+            cap01: "Lorenz attractor (1/2)",
+            cap02: "Lorenz attractor (2/2)",
+            cap03: "Van der Pol oscillator",
+            cap04: "Harmonic oscillator"
         },
         fr: {
             title: "Attracteur de Lorenz",
@@ -434,7 +483,12 @@ const PROJECTS = {
 
             results01: "Le programme fonctionne pour les trois systèmes : il demande les paramètres à l'utilisateur, calcule la trajectoire, l'enregistre avec la position, les vitesses et la vitesse totale à chaque instant, et permet de tracer les courbes avec Gnuplot. Il vérifie les allocations mémoire et les choix de l'utilisateur, et libère la mémoire avant de quitter.",
             results02: "C'était notre première utilisation de GitHub, et cela a été notre principale source de difficulté. Il a fallu comprendre comment partager un dépôt, faire des commits réguliers, récupérer le travail de l'autre et éviter de se gêner en modifiant les mêmes fichiers. Cet apprentissage a été utile : Git est un outil quasi indispensable pour travailler à plusieurs sur du code.",
-            results03: "Ce projet m'a aussi appris à coder en C, c'est-à-dire à découper un programme en modules plutôt que de tout mettre dans un seul fichier, à gérer la mémoire, à utiliser des pointeurs de fonctions pour traiter plusieurs systèmes de la même façon, et à automatiser la compilation avec Make."
+            results03: "Ce projet m'a aussi appris à coder en C, c'est-à-dire à découper un programme en modules plutôt que de tout mettre dans un seul fichier, à gérer la mémoire, à utiliser des pointeurs de fonctions pour traiter plusieurs systèmes de la même façon, et à automatiser la compilation avec Make.",
+
+            cap01: "Attracteur de Lorenz (1/2)",
+            cap02: "Attracteur de Lorenz (2/2)",
+            cap03: "Oscillateur de Van der Pol",
+            cap04: "Oscillateur harmonique"
         }
     },
     pro: {
@@ -460,7 +514,10 @@ const PROJECTS = {
             role05: "As the group's representative, I was in charge of communication with our coordinator and the teachers. This took the form of emails as well as face-to-face discussion points.",
 
             results01: "The many questionnaires led to results that were often conclusive. Students were willing enough to take part in the group assessments, so each person could get a relatively objective mark against the criteria. However, the statistics also show that nearly half of the year group did not feel the need to call on our group. This is partly explained by the fact that some people do not need us to create an Excel-type file for them because they already have the skills to do it, which means our role in the project was sometimes unclear.",
-            results02: "On a personal level, this project taught me in particular to work in a team, since the number of people involved was considerable. With the representative role, I got to experience interesting responsibilities such as decision-making. I was also able to improve my use of tools such as Google Drive and Google Sheets thanks to the large-scale work that was carried out."
+            results02: "On a personal level, this project taught me in particular to work in a team, since the number of people involved was considerable. With the representative role, I got to experience interesting responsibilities such as decision-making. I was also able to improve my use of tools such as Google Drive and Google Sheets thanks to the large-scale work that was carried out.",
+
+            cap01: "Charts and results of questionnaires",
+            cap02: "Illustration of the Tally questionnaire"
         },
         fr: {
             title: "Projet Professionnel",
@@ -483,7 +540,10 @@ const PROJECTS = {
             role05: "En tant que délégué du groupe, j'étais en charge d'assurer le communication avec notre coordinateur et les enseignants. Cela s'est notamment manifesté par des échanges de mail, ainsi que des points de discussions en présentiel.",
 
             results01: "Les nombreux questionnaires ont mené à des résultats souvent concluants. Les étudiants ont été suffisamment volontaires vis-à-vis des évaluations de groupes, ce qui fait que chaque personne a pu avoir une note relativement objective par rapport aux critères. Cependant, nous pouvons aussi constater dans les statistiques que près de la moitié de la promotion n'a pas ressenti le besoin de faire appel à notre groupe. Cela s'explique notamment par le fait que certains n'ont pas besoin qu'on leur crée un fichier type Excel car ils ont déjà les compétences pour, ce qui fait que notre rôle au sein du projet a parfois été flou.",            
-            results02: "D'un point de vue personnel, ce projet m'a notamment appris à travail en équipe, puisque le nombre de personnes impliquées était conséquent. Avec la fonction de délégué j'ai pu expérimenté des responsabilités intéressantes comme la prise de décisions. J'ai également pu perfectionner la pratique de certains outils comme Google Drive et Google Sheets grâce au travail d'ampleur qui a été mené."
+            results02: "D'un point de vue personnel, ce projet m'a notamment appris à travail en équipe, puisque le nombre de personnes impliquées était conséquent. Avec la fonction de délégué j'ai pu expérimenté des responsabilités intéressantes comme la prise de décisions. J'ai également pu perfectionner la pratique de certains outils comme Google Drive et Google Sheets grâce au travail d'ampleur qui a été mené.",
+
+            cap01: "Graphes et résultats de questionnaires",
+            cap02: "Illustration du questionnaire Tally"
         }
     }
 };
