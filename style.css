@@ -969,6 +969,9 @@ html[data-lang="fr"] .lang-btn [data-l="fr"] {
     .proj-aside {
         position: static;
     }
+    .about-media {
+        display: none;
+    }
 }
 
 @media (max-width: 860px) {
